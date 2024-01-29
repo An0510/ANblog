@@ -44,7 +44,7 @@ jobs:
           # 源目录
           SOURCE: './dist/'
           # 服务器ip
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_HOST: ${{ variables.REMOTE_HOST }}
           # 用户
           REMOTE_USER: 'root'
           # 目标地址
