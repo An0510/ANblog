@@ -5,10 +5,10 @@ title: ChoDocs
 titleTemplate: 一站式前端内容网站，包括学习路线、知识体系
 
 hero:
-  name: ChoDocs
+  name: AN的小站
   text: "Front-end learning document collection"
   tagline: |
-    一站式前端内容网站，包括学习路线、知识体系
+    一个分享站
   image:
     src: /it.svg
     alt: ChoDocs

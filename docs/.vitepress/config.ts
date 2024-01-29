@@ -86,7 +86,7 @@ export default withPwa(defineConfig({
   head: [
     ['meta', { name: 'referrer', content: 'no-referrer-when-downgrade' }],
     ['meta', { name: 'keywords', content: keywords }],
-    ['meta', { name: 'author', content: 'Choi Yang' }],
+    ['meta', { name: 'author', content: 'Annan' }],
     ['meta', { property: 'og:type', content: 'article' }],
     ['meta', { name: 'application-name', content: name }],
     ['meta', { name: 'apple-mobile-web-app-title', content: name }],

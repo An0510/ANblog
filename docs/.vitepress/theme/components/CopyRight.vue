@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import { useData } from 'vitepress'
 
-const defaultAuthor = 'Choi Yang'
+const defaultAuthor = 'Annan'
 const { frontmatter } = useData()
 
 const author = ref(defaultAuthor)
@@ -11,7 +11,7 @@ if (frontmatter.value?.author)
   author.value = frontmatter.value?.author
 
 function reName(name: string) {
-  return name === 'Choi Yang' ? 'Chocolate1999' : name
+  return name
 }
 
 const pageHref = location.href

@@ -35,7 +35,7 @@ pnpm dev
 
 ```bash
 ---
-author: Choi Yang
+author: ANNAN
 contributors: [HearLing]
 date: 2023-01-01
 ---

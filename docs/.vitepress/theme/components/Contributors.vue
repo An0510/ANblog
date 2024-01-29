@@ -2,14 +2,14 @@
 import { ref } from 'vue'
 import { useData } from 'vitepress'
 
-const defaultAuthor = 'Chocolate1999'
+const defaultAuthor = 'ANNAN'
 const { frontmatter } = useData()
 
 const contributorsArr = [frontmatter.value?.author, ...frontmatter.value.contributors || []].filter(x => x)
 const contributors = ref(contributorsArr)
 
 function reName(name: string) {
-  return name === 'Choi Yang' ? 'Chocolate1999' : name
+  return name
 }
 
 function getAvatarUrl(name: string) {
@@ -37,6 +37,6 @@ function isNotEmpty(arr: string | string[]) {
     <a :href="getGithubLink(defaultAuthor)" rel="noreferrer" target="_blank">
       <img :src="getAvatarUrl(defaultAuthor)" class="w-8 h-8 rounded-full">
     </a>
-    {{ 'Choi Yang' }}
+    {{ 'Annan' }}
   </div>
 </template>
