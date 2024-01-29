@@ -37,16 +37,16 @@ jobs:
           # 私钥
           SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           # SCP参数
-          ARGS: '-avzr --delete'
+          ARGS: -avzr --delete
           # 源目录
-          SOURCE: './dist/'
+          SOURCE: ./dist/
           # 服务器ip
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           # 用户
-          REMOTE_USER: 'root'
+          REMOTE_USER: root
           # 目标地址
           # TARGET: '/var/www/html'
-          TARGET: '/root/annan.life'
+          TARGET: /root/annan.life
       # 推送信息到微信
       # - name: 推送信息到微信
       #   uses: easychen/github-action-server-chan@main
