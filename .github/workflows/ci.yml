@@ -49,7 +49,7 @@ jobs:
           REMOTE_USER: 'root'
           # 目标地址
           # TARGET: '/var/www/html'
-          TARGET: '/root/demo.zuo11.com'
+          TARGET: '/root/annan.life'
       # 推送信息到微信
       # - name: 推送信息到微信
       #   uses: easychen/github-action-server-chan@main
