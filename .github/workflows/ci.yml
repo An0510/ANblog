@@ -20,19 +20,19 @@ jobs:
         uses: actions/checkout@main
       # 安装Node环境
 
-      - name: 安装node.js
-        # 使用action库  actions/setup-node安装node
-        uses: actions/setup-node@main
-        with:
-          node-version: lts/*
-
-      # 安装依赖
-      - name: 安装依赖
-        run: npm install
-
-      # 打包
-      - name: 打包
-        run: npm run build
+#      - name: 安装node.js
+#        # 使用action库  actions/setup-node安装node
+#        uses: actions/setup-node@main
+#        with:
+#          node-version: lts/*
+#
+#      # 安装依赖
+#      - name: 安装依赖
+#        run: npm install
+#
+#      # 打包
+#      - name: 打包
+#        run: npm run build
       # 上传到阿里云
       - name: 发布到阿里云
         uses: easingthemes/ssh-deploy@main
