@@ -7,7 +7,6 @@ export default {
       collapsed: false,
       items: [
         { text: '阅读须知', link: '/guide' },
-        { text: '学习圈子', link: '/zsxq' },
         {
           text: '23 年每周学习动态',
           items: [
