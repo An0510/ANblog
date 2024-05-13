@@ -171,38 +171,23 @@ function sidebarPartterns() {
 function sidebarProgram() {
   return [
     {
-      text: '💻 编程学习',
+      text: '💻 前端基础',
       items: [
         { text: '介绍', link: '/program/' },
         {
-          text: '编程实战',
-          items: [
-            { text: '发布 npm 包', link: '/program/npm-package/' },
-            { text: 'tRPC 基础篇', link: '/program/trpc/' },
-          ],
-        },
-        {
-          text: 'VitePress 配置',
+          text: 'JavaScript',
           items: [
             {
-              text: '给 VitePress 添加 algolia 搜索',
-              link: '/program/vitepress-algolia/',
+              text: 'Philip Roberts-事件循环', link: '/program/frontend-basic/JavaScript/event-loop/',
             },
             {
-              text: '接上 algolia 搜索（补充）',
-              link: '/program/vitepress-algolia-plus/',
+              text: 'async/await', link: '/program/frontend-basic/JavaScript/async-await/',
             },
             {
-              text: '接上 algolia 搜索（解决）',
-              link: '/program/vitepress-algolia-solved/',
+              text: '数据类型检测', link: '/program/frontend-basic/JavaScript/data-type/',
             },
             {
-              text: '给 VitePress 添加本地搜索功能',
-              link: '/program/vitepress-local-search/',
-            },
-            {
-              text: 'VitePress 插件合集（beta）',
-              link: '/program/vitepress-plugin/',
+              text: '原型链', link: '/program/frontend-basic/JavaScript/prototype/',
             },
           ],
         },
