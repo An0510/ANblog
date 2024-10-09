@@ -1,7 +1,8 @@
 ---
 author: "Annan"
-date: '2021-08-05'
+date: 2021-08-05
 ---
+
 # async/await
 为了解决异步操作对于代码的可读性，避免回调地狱(很多个异步回调嵌套的请况)，JavaScript社区先后退出`Promise+then`和`generator+co`的解决方案，直到现在的`async/await`，也叫异步编程的终极解决方案，可以在不阻塞主线程的情况下用同步代码的写代码方式实现异步访问资源的能力，而且代码逻辑更清晰。
 
@@ -91,8 +92,8 @@ fetch('https://juejin.cn/').then(function(){
 ```js
 function* foo(){
   let response1 = yield fetch('https://juejin.cn/')
-  console.log('response111') 
-  let response2 = yield fetch('https://www.Anblog.top') 
+  console.log('response111')
+  let response2 = yield fetch('https://www.Anblog.top')
   console.log('response222')
 }
 //创建gen协程
@@ -145,7 +146,7 @@ co(foo());
 
 ```js
 async function foo(){
-	return 2 
+	return 2
 }
 console.log(foo()) //Promise {<fulfilled>: 2}
 foo().then((val)=>{console.log(val))} //2

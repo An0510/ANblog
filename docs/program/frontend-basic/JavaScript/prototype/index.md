@@ -1,6 +1,6 @@
 ---
 title: JavaScript原型链
-date: '2021-08-01'
+date: 2021-08-01
 ---
 # JavaScript原型链
 
@@ -75,7 +75,7 @@ console.log(P.__proto__ == Person.prototype) //true
    	teacher:'新老师'
    }
    console.log(P.teacher) //新老师
-   
+
    ```
 
    有人可能会想，那让父母直接给所有实例都替换新的老师不行吗，也就是改变Person构造函数的`prototype`，让这个属性指向一个新的对象
