@@ -58,10 +58,10 @@ import { icons } from './socialIcons';
 
 const members = [
   {
-    avatar: 'https://www.github.com/Chocolate1999.png',
+    avatar: 'https://www.github.com/An0510.png',
     name: 'An nan',
-    title: '流水不争先, 争的是滔滔不绝',
-    desc: 'FE Developer<br/>Creator @ <a href="https://github.com/chodocs/chodocs" target="_blank">ChoDocs</a>',
+    title: '大道至简 知易行难',
+    desc: 'Developer',
     links: [
       { icon: 'github', link: 'https://github.com/An0510' }
     ]
