@@ -7,140 +7,45 @@ export default {
       collapsed: false,
       items: [
         { text: '阅读须知', link: '/guide' },
-        {
-          text: '23 年每周学习动态',
-          items: [
-            {
-              text: '内容介绍',
-              link: '/weekly/guide',
-            },
-            {
-              text: '3 月',
-              link: '/weekly/202303',
-            },
-            {
-              text: '4 月',
-              link: '/weekly/202304',
-            },
-            {
-              text: '5 月',
-              link: '/weekly/202305',
-            },
-            {
-              text: '6 月',
-              link: '/weekly/202306',
-            },
-            {
-              text: '7 月',
-              link: '/weekly/202307',
-            },
-            {
-              text: '8 月',
-              link: '/weekly/202308',
-            },
-            {
-              text: '9 月',
-              link: '/weekly/202309',
-            },
-            {
-              text: '10 月',
-              link: '/weekly/202310',
-            },
-          ],
-        },
         { text: '资源导航', link: '/favorites' },
         { text: '编程学习', link: '/program/' },
-        { text: 'Arc 激活码获取', link: '/arc' },
-        { text: '2022 年终总结', link: '/2022' },
-        { text: '关于 ChoDocs', link: '/chodocs' },
-        { text: '参与贡献指南', link: '/contributing' },
-      ],
-    },
-    {
-      text: '🍎 Next.js 实战',
-      collapsed: false,
-      items: [
-        { text: '添加 sitemap', link: '/nextjs/sitemap/' },
       ],
     },
     {
       text: '🍏 Vue.js 实战',
       collapsed: false,
       items: [
-        { text: '基于 Vue3 后台管理系统', link: '/vuejs/vue3-management-system/' },
+        {
+          text: '基于 Vue3 后台管理系统',
+          link: '/vuejs/vue3-management-system/',
+        },
       ],
-    },
-    {
-      text: '📘 TS 学习',
-      collapsed: false,
-      items: [
-        { text: '导读', link: '/ts/ch' },
-        { text: '环境配置', link: '/ts/ch0' },
-        { text: '基础操作', link: '/ts/ch1' },
-        { text: '工具类', link: '/ts/ch2' },
-        { text: '函数系统', link: '/ts/ch3' },
-        { text: '泛型', link: '/ts/ch4' },
-      ],
-    },
-    {
-      text: '📝 备忘录',
-      collapsed: false,
-      items: [{ text: 'Git 命令', link: '/memo/git-command/' }],
     },
   ],
   '/program/': sidebarProgram(),
   '/patterns/': sidebarPartterns(),
+  '/ai/': sidebarAI(),
   '/algorithm/': sidebarAlgorithm(),
-  '/green/': [
-    {
-      text: '🎈 ACM 经历',
-      collapsed: false,
-      items: [
-        { text: '阅读须知', link: '/green/ch' },
-        {
-          text: '2019年 第二届信息科学与工程学院院赛-正式赛(赛后感想)',
-          link: '/green/ch1',
-        },
-        {
-          text: '2019年 第二届信息科学与工程学院院赛-正式赛(赛后补题)',
-          link: '/green/ch2',
-        },
-        {
-          text: '第四届全国中医药院校大学生程序设计竞赛（上篇）',
-          link: '/green/ch3',
-        },
-        {
-          text: '第四届全国中医药院校大学生程序设计竞赛（下篇）',
-          link: '/green/ch4',
-        },
-      ],
-    },
-    {
-      text: '💭 项目经历',
-      collapsed: false,
-      items: [
-        {
-          text: '🏆 从大一到大三，我与服务外包大赛',
-          link: '/green/hl-contest/',
-        },
-      ],
-    },
-  ],
   '/tool/': [
     {
       text: '🎒 常用',
       collapsed: false,
       items: [
-        { text: 'emoji-list', link: '/tool/emoji-list' },
-        { text: 'finalcut 剪辑快捷键', link: '/tool/finalcut/' },
-        { text: '什么时候下班？', link: '/tool/off-time/' },
-        { text: '如何正常访问 GitHub？', link: '/tool/github520' },
-        { text: '版本管理，Git 基础', link: '/tool/git/' },
+        // { text: "emoji-list", link: "/tool/emoji-list" },
       ],
     },
   ],
   '/essay/': autoSidebar({ base: 'essay' }),
-  '/interview/': sidebarInterview(),
+}
+
+function sidebarAI() {
+  return [
+    {
+      text: '📖 AI',
+      collapsed: false,
+      items: [{ text: '介绍', link: '/ai/' }],
+    },
+  ]
 }
 
 function sidebarPartterns() {
@@ -178,121 +83,23 @@ function sidebarProgram() {
           text: 'JavaScript',
           items: [
             {
-              text: 'Philip Roberts-事件循环', link: '/program/frontend-basic/JavaScript/event-loop/',
+              text: 'Philip Roberts-事件循环',
+              link: '/program/frontend-basic/JavaScript/event-loop/',
             },
             {
-              text: 'async/await', link: '/program/frontend-basic/JavaScript/async-await/',
+              text: 'async/await',
+              link: '/program/frontend-basic/JavaScript/async-await/',
             },
             {
-              text: '数据类型检测', link: '/program/frontend-basic/JavaScript/data-type/',
+              text: '数据类型检测',
+              link: '/program/frontend-basic/JavaScript/data-type/',
             },
             {
-              text: '原型链', link: '/program/frontend-basic/JavaScript/prototype/',
+              text: '原型链',
+              link: '/program/frontend-basic/JavaScript/prototype/',
             },
           ],
         },
-      ],
-    },
-  ]
-}
-
-function sidebarInterview() {
-  return [
-    {
-      items: [{ text: '介绍', link: '/interview/' }],
-    },
-    {
-      text: '模拟面试',
-      collapsed: false,
-      items: [
-        { text: '介绍', link: '/interview/interviewer/' },
-        { text: '模拟面试 01', link: '/interview/interviewer/01' },
-        { text: '模拟面试 02', link: '/interview/interviewer/02' },
-        { text: '模拟面试 03', link: '/interview/interviewer/03' },
-      ],
-    },
-    {
-      text: '春招实习',
-      collapsed: false,
-      items: [
-        {
-          text: '询问面试官的问题',
-          link: '/interview/spring-internship/interviewer/',
-        },
-        {
-          text: '腾讯一面',
-          link: '/interview/spring-internship/tencent-imweb/',
-        },
-        {
-          text: '字节一面准备',
-          link: '/interview/spring-internship/bytedance-preparation/',
-        },
-        { text: '字节一面', link: '/interview/spring-internship/bytedance1/' },
-        {
-          text: '深信服-星耀实习',
-          link: '/interview/spring-internship/sangfor/',
-        },
-        { text: '恒生电子面试', link: '/interview/spring-internship/hundsun/' },
-        {
-          text: '腾讯云 COS 一面',
-          link: '/interview/spring-internship/tencent-cos/',
-        },
-        { text: '春招知识整理', link: '/interview/spring-internship/summary/' },
-      ],
-    },
-    {
-      text: '2023 面试合集',
-      collapsed: false,
-      items: [{ text: 'isolcat 三月实习', link: '/interview/isolcat/' },
-        { text: 'HearLing 六月社招', link: '/interview/2023/hearling' }],
-    },
-    {
-      text: 'React',
-      collapsed: false,
-      items: [{ text: '模拟面试', link: '/interview/react-summary/' }],
-    },
-    {
-      text: 'Vue',
-      collapsed: false,
-      items: [{ text: '模拟面试', link: '/interview/vue/' }],
-    },
-    {
-      text: '前端基础：js/html/css/ts',
-      collapsed: false,
-      items: [
-        { text: 'JS 面试大全', link: '/interview/js/' },
-        { text: 'JS 自测清单（一）', link: '/interview/js/test/1.md' },
-        { text: 'JS 自测清单（二）', link: '/interview/js/test/2.md' },
-        { text: 'JS 自测清单（三）', link: '/interview/js/test/3.md' },
-        { text: 'CSS 面试', link: '/interview/js/css' },
-        { text: 'HTML 面试', link: '/interview/js/html' },
-        { text: 'TS 面试', link: '/interview/js/ts' },
-      ],
-    },
-    {
-      text: '操作系统/网络/浏览器',
-      collapsed: false,
-      items: [
-        { text: '操作系统', link: '/interview/system/' },
-        { text: '网络-TCP', link: '/interview/net/tcp/' },
-        { text: '网络-HTTP', link: '/interview/net/http/' },
-        { text: '网络-Websocket', link: '/interview/net/websocket/' },
-        { text: '网络-跨域问题', link: '/interview/net/cors/' },
-        {
-          text: '浏览器-Session/Cookie/Token',
-          link: '/interview/browser/cookie',
-        },
-        {
-          text: '浏览器-事件循环',
-          link: '/interview/browser/principle/eventLoop',
-        },
-        {
-          text: '浏览器-输入URL到页面展示发生了什么',
-          link: '/interview/browser/process/',
-        },
-        { text: '浏览器-缓存', link: '/interview/browser/cache' },
-        { text: '浏览器-开发者工具', link: '/interview/browser/performance' },
-        { text: '浏览器-安全', link: '/interview/browser/safety/' },
       ],
     },
   ]
