@@ -39,6 +39,7 @@
     "dayjs": "^1.11.10",
     "eslint": "8.50.0",
     "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-unused-imports": "^4.1.4",
     "esno": "^4.0.0",
     "fast-glob": "^3.3.2",
     "feed": "^4.2.2",
