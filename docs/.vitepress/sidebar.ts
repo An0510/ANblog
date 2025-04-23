@@ -36,6 +36,7 @@ export default {
     },
   ],
   '/essay/': autoSidebar({ base: 'essay' }),
+  '/archive/': autoSidebar({ base: 'archive' }),
 }
 
 function sidebarAI() {
@@ -97,6 +98,39 @@ function sidebarProgram() {
             {
               text: '原型链',
               link: '/program/frontend-basic/JavaScript/prototype/',
+            },
+            {
+              text: '变量提升',
+              link: '/program/frontend-basic/JavaScript/variable-hosting/',
+            },
+            {
+              text: '作用域角度理解闭包',
+              link: '/program/frontend-basic/JavaScript/closure/',
+            },
+            {
+              text: '从执行上下文的角度讲解 this',
+              link: '/program/frontend-basic/JavaScript/this/',
+            },
+            {
+              text: 'let和const以及作用域',
+              link: '/program/frontend-basic/JavaScript/let_const/',
+            },
+            {
+              text: 'JavaScript调用栈和栈溢出',
+              link: '/program/frontend-basic/JavaScript/stack_overflow/',
+            },
+          ],
+        },
+        {
+          text: '浏览器',
+          items: [
+            {
+              text: '浏览器从输入URL到页面展示发生了什么',
+              link: '/program/frontend-basic/Browser/browser-url/',
+            },
+            {
+              text: '重绘重排',
+              link: '/program/frontend-basic/Browser/chonghuichongpai/',
             },
           ],
         },

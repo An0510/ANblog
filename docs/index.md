@@ -41,6 +41,11 @@ features:
     details: 记录时光。
     link: /green/ch
     linkText: 记录当下
+  - icon: 📃
+    title: 归档
+    details: 归档一些老文章
+    link: /archive/
+    linkText: 开始查阅
 ---
 
 <script setup>
@@ -72,9 +77,9 @@ const members = [
       个人介绍
     </template>
   </VPTeamPageTitle>
-  <VPTeamMembers
-    :members="members"
-  />
+  <div style="display: flex; justify-content: center;">
+    <VPTeamMembers :members="members" />
+  </div>
 </VPTeamPage>
 
 <HomeContributors/>
