@@ -95,7 +95,7 @@ const component = computed(() => {
             <div class="items-center gap-1 hidden sm:flex">
               <span
                 class="text-ellipsis w-full whitespace-nowrap overflow-hidden text-sm font-500 opacity-50"
-              >chodocs.cn</span>
+              >annan.life</span>
             </div>
           </div>
         </section>
