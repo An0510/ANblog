@@ -21,7 +21,7 @@ features:
     details: 前端基础知识
     link: /program/
     linkText: 开始学习
-  - icon: 📓
+  - icon: 🎆
     title: AI
     details: AI 相关知识
     link: /ai/
@@ -36,10 +36,20 @@ features:
     details: 归纳一些编程相关工具与网站，提高效率。
     link: /tool/
     linkText: 提高效率
+  - icon: ✨️
+    title: 分享
+    details: 持续输出分享，分享知识。
+    link: /share/
+    linkText: 细听分说
+  - icon: 📖
+    title: 看过的书籍/专栏
+    details: 记录自己的输入
+    link: /input/
+    linkText: 随便瞅瞅
   - icon: 🌱
     title: 时光岁月
     details: 记录时光。
-    link: /green/ch
+    link: /personal/
     linkText: 记录当下
   - icon: 📃
     title: 归档
