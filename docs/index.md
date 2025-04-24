@@ -6,7 +6,7 @@ titleTemplate: 分享生活、分享知识
 
 hero:
   name: AN的小站
-  text: "分享生活 分享技术"
+  text: "Blog迁移中..."
   tagline: |
   image:
     src: /it.svg
