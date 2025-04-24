@@ -44,13 +44,13 @@ export default withPwa(
         copyright: '',
       },
       nav: [
-        {
-          text: '🔥 专栏',
-          items: [
-            { text: '🔥 前端算法', link: '/algorithm/guide/' },
-            { text: '🔥 设计模式', link: '/patterns/guide/' },
-          ],
-        },
+        // {
+        //   text: '🔥 专栏',
+        //   items: [
+        //     { text: '🔥 前端算法', link: '/algorithm/guide/' },
+        //     { text: '🔥 设计模式', link: '/patterns/guide/' },
+        //   ],
+        // },
         {
           text: '编程',
           items: [
