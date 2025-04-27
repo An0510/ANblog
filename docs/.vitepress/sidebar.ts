@@ -11,17 +11,8 @@ export default {
         { text: '编程学习', link: '/program/' },
       ],
     },
-    // {
-    //   text: '🍏 Vue.js 实战',
-    //   collapsed: false,
-    //   items: [
-    //     {
-    //       text: '基于 Vue3 后台管理系统',
-    //       link: '/vuejs/vue3-management-system/',
-    //     },
-    //   ],
-    // },
   ],
+  '/framework/': sidebarFramework(),
   '/program/': sidebarProgram(),
   '/patterns/': sidebarPartterns(),
   '/ai/': sidebarAI(),
@@ -45,6 +36,28 @@ function sidebarAI() {
       text: '📖 AI',
       collapsed: false,
       items: [{ text: '介绍', link: '/ai/' }],
+    },
+  ]
+}
+
+function sidebarFramework() {
+  return [
+    {
+      text: '🏗️ 框架',
+      items: [
+        { text: '介绍', link: '/framework/' },
+        {
+          text: 'Vue',
+          items: [
+            {
+              text: 'Vue3 特性以及相较于 Vue2 的优化点',
+              link: '/framework/vue/Vue3Vue2/',
+            },
+            { text: 'KeepAlive', link: '/framework/vue/KeepAlive/' },
+            { text: 'Reactivity浅析', link: '/framework/vue/Reactivity/' },
+          ],
+        },
+      ],
     },
   ]
 }

@@ -21,6 +21,11 @@ features:
     details: 前端基础知识
     link: /program/
     linkText: 开始学习
+  - icon: 🏗️
+    title: 框架
+    details: 框架 相关知识
+    link: /framework/
+    linkText: 开始学习
   - icon: 🎆
     title: AI
     details: AI 相关知识
