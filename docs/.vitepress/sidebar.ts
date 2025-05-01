@@ -9,11 +9,12 @@ export default {
         { text: '阅读须知', link: '/guide' },
         { text: '资源导航', link: '/favorites' },
         { text: '编程学习', link: '/program/' },
+        { text: '前端基础', link: '/frontend/' },
       ],
     },
   ],
   '/framework/': sidebarFramework(),
-  '/program/': sidebarProgram(),
+  '/frontend/': sidebarFrontend(),
   '/patterns/': sidebarPartterns(),
   '/ai/': sidebarAI(),
   '/algorithm/': sidebarAlgorithm(),
@@ -87,50 +88,50 @@ function sidebarPartterns() {
   ]
 }
 
-function sidebarProgram() {
+function sidebarFrontend() {
   return [
     {
       text: '💻 前端基础',
       items: [
-        { text: '介绍', link: '/program/' },
+        { text: '介绍', link: '/frontend/' },
         {
           text: 'JavaScript',
           items: [
             {
               text: 'Philip Roberts-事件循环',
-              link: '/program/frontend-basic/JavaScript/event-loop/',
+              link: '/frontend/JavaScript/event-loop/',
             },
             {
               text: 'async/await',
-              link: '/program/frontend-basic/JavaScript/async-await/',
+              link: '/frontend/JavaScript/async-await/',
             },
             {
               text: '数据类型检测',
-              link: '/program/frontend-basic/JavaScript/data-type/',
+              link: '/frontend/JavaScript/data-type/',
             },
             {
               text: '原型链',
-              link: '/program/frontend-basic/JavaScript/prototype/',
+              link: '/frontend/JavaScript/prototype/',
             },
             {
               text: '变量提升',
-              link: '/program/frontend-basic/JavaScript/variable-hosting/',
+              link: '/frontend/JavaScript/variable-hosting/',
             },
             {
               text: '作用域角度理解闭包',
-              link: '/program/frontend-basic/JavaScript/closure/',
+              link: '/frontend/JavaScript/closure/',
             },
             {
               text: '从执行上下文的角度讲解 this',
-              link: '/program/frontend-basic/JavaScript/this/',
+              link: '/frontend/JavaScript/this/',
             },
             {
               text: 'let和const以及作用域',
-              link: '/program/frontend-basic/JavaScript/let_const/',
+              link: '/frontend/JavaScript/let_const/',
             },
             {
               text: 'JavaScript调用栈和栈溢出',
-              link: '/program/frontend-basic/JavaScript/stack_overflow/',
+              link: '/frontend/JavaScript/stack_overflow/',
             },
           ],
         },
@@ -139,11 +140,11 @@ function sidebarProgram() {
           items: [
             {
               text: '浏览器从输入URL到页面展示发生了什么',
-              link: '/program/frontend-basic/Browser/browser-url/',
+              link: '/frontend/Browser/browser-url/',
             },
             {
               text: '重绘重排',
-              link: '/program/frontend-basic/Browser/chonghuichongpai/',
+              link: '/frontend/Browser/chonghuichongpai/',
             },
           ],
         },

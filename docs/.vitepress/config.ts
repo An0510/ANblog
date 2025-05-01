@@ -55,7 +55,7 @@ export default withPwa(
           text: '编程',
           items: [
             { text: '⭐ 资源导航', link: '/favorites' },
-            { text: '💻 编程学习', link: '/program/' },
+            { text: '🌐 前端基础', link: '/frontend/' },
             { text: '🔧 编程工具', link: '/tool/' },
           ],
         },

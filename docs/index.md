@@ -19,7 +19,7 @@ features:
   - icon: 📓
     title: 前端基础
     details: 前端基础知识
-    link: /program/
+    link: /frontend/
     linkText: 开始学习
   - icon: 🏗️
     title: 框架
