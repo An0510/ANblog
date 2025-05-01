@@ -6,7 +6,7 @@ import { genFeed } from './plugins/genFeed'
 import { pwa } from './plugins/pwa'
 import sidebar from './sidebar'
 import socialLinks from './link'
-import algolia from './algolia'
+import search from './plugins/search'
 
 export default withPwa(
   defineConfig({
@@ -64,13 +64,15 @@ export default withPwa(
           items: [{ text: '✏️ 随笔', link: '/essay/' }],
         },
       ],
-      // algolia搜索
+      // 本地搜索插件
       search: {
-        provider: 'algolia',
-        options: algolia,
+        provider: 'local',
       },
       sidebar,
       socialLinks,
+    },
+    vite: {
+      plugins: [search],
     },
     head: [
       ['meta', { name: 'referrer', content: 'no-referrer-when-downgrade' }],

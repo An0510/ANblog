@@ -43,9 +43,11 @@
     "esno": "^4.0.0",
     "fast-glob": "^3.3.2",
     "feed": "^4.2.2",
+    "flexsearch": "^0.7.43",
     "fs-extra": "^11.1.1",
     "gray-matter": "^4.0.3",
     "lint-staged": "^15.1.0",
+    "markdown-it": "^14.1.0",
     "md5": "^2.3.0",
     "medium-zoom": "^1.1.0",
     "moment": "^2.29.4",
@@ -62,6 +64,7 @@
     "vite": "^4.5.0",
     "vite-plugin-pwa": "^0.16.7",
     "vitepress": "^1.0.0-rc.29",
+    "vitepress-plugin-search": "^1.0.4-alpha.22",
     "vue": "^3.3.8"
   },
   "simple-git-hooks": {
