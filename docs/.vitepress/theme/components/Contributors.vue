@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import { useData } from 'vitepress'
 
-const defaultAuthor = 'ANNAN'
+const defaultAuthor = 'Annan'
 const { frontmatter } = useData()
 
 const contributorsArr = [frontmatter.value?.author, ...frontmatter.value.contributors || []].filter(x => x)
@@ -13,7 +13,8 @@ function reName(name: string) {
 }
 
 function getAvatarUrl(name: string) {
-  return `https://github.com/${reName(name)}.png`
+  return 'https://github.com/An0510.png'
+  // return `https://github.com/${reName(name)}.png`
 }
 function getGithubLink(name: string) {
   return `https://github.com/${reName(name)}`

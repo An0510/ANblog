@@ -95,6 +95,13 @@ function sidebarFrontend() {
       items: [
         { text: '介绍', link: '/frontend/' },
         {
+          text: 'HTML',
+          items: [
+            { text: 'HTML5新特性', link: '/frontend/HTML/HTML5/' },
+            { text: '表单增强', link: '/frontend/HTML/form/' },
+          ],
+        },
+        {
           text: 'JavaScript',
           items: [
             {
