@@ -115,7 +115,7 @@ var Obj = {
     console.log(this);
   },
 };
-Obj.getThis(); //{name: "Obj", getDetail: ƒ}
+Obj.getThis(); //{name: "Obj", getThis: ƒ}
 ```
 
 可以看到这样输出的 this 是指向当前对象的，可以得出一个结论，**使用对象来调用其内部方法，这个方法的 this 是指向对象本身的**。
@@ -148,6 +148,18 @@ foo();
 
 也就是说如果是在全局执行一个函数，那这个函数 this 就指向全局，但如果是对象里面，那这个 this 就指向对象，只和这个函数执行的调用者有关。
 
+### 数组/对象通过原型链调用方法 将this指向调用对象
+
+```javascript
+Array.prototype.logArr = function () {
+  console.log(this);
+};
+let arr = [1, 2, 3];
+arr.logArr(); // [1,2,3]
+```
+
+在 Array 原型上声明方法,然后数组去调用方法时发现自己身上没有,就找到了原型身上,此时原型上的方法中的 this 就指向了当前的数组。
+
 ### 通过构造函数中设置
 
 比如说 new 一个对象
@@ -162,22 +174,20 @@ console.log(p1); //Person {name: "P"}
 
 **你知道 JavaScript 引擎在 new 一个对象的过程中做了什么吗？**
 
-1. 首先先创建一个空对象 p1
-2. 调用 Person.call(p1)，这样当 Person 的执行上下文创建的时候 this 就指向空对象 p1
+1. 首先先创建一个空对象 p1，设置空对象的__proto__为构造函数的prototype
+2. 调用 Person.apply(p1, ...args)，这样当 Person 的执行上下文创建的时候 this 就指向空对象 p1, args是构造函数入参
 3. 执行 Person 方法，因为此时 this 指向 p1，因此 p1 的 name='p'
 4. 返回 p1 这个对象
-
-### 数组/对象通过原型链调用 this
-
-```javascript
-Array.prototype.logArr = function () {
-  console.log(this);
-};
-let arr = [1, 2, 3];
-arr.logArr(); // [1,2,3]
+```js
+function myNew(Constructor, ...args) {
+  // 1. 创建新对象，原型指向构造函数的 prototype
+  const obj = Object.create(Constructor.prototype);
+  // 2. 执行构造函数，this 绑定到新对象
+  const result = Constructor.apply(obj, args);
+  // 3. 如果构造函数返回对象，则返回该对象，否则返回新对象
+  return (typeof result === 'object' && result !== null) ? result : obj;
+}
 ```
-
-在 Array 原型上声明方法,然后数组去调用方法时发现自己身上没有,就找到了原型身上,此时原型上的方法中的 this 就指向了当前的数组.
 
 ## this 的设计缺陷
 

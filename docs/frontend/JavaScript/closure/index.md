@@ -1,8 +1,11 @@
 ---
 date: 2021-11-02
 ---
+# 闭包解析
 
-# 作用域角度理解闭包
+本文主要是从两个方面解析闭包：作用域、内存
+
+## 作用域角度理解闭包
 
 **闭包产生的本质是当前环境中存在指向父级作用域的引用。**
 
@@ -66,85 +69,6 @@ Global 代表全局执行上下文，**Scope 中体现的就是作用域链**，
 
 解决方法：**如果引用闭包的函数是局部变量，等函数销毁之后，下次 JavaScript 引擎执行垃圾回收的时候，判断闭包这部分不使用了，JavaScript 引擎的垃圾回收期就会回收这块内存**。
 
-分析下面这段代码
-
-```javascript
-var bar = {
-  myName: "time.geekbang.com",
-  printName: function () {
-    console.log(myName);
-  },
-};
-function foo() {
-  let myName = "极客时间";
-  return bar.printName;
-}
-let myName = "极客邦";
-let _printName = foo();
-_printName();
-bar.printName();
-```
-
-1. 编译生成`全局执行上下文` ：
-
-变量环境 : bar=undefined foo=function... 词法环境：myName=undefined \_printName=undefined
-
-可执行代码：`bar={...}`、`myName = "极客邦"`、 `_printName = foo()` 、`_printName()`、`bar.printName()`
-
-2.执行`bar={...}`和`myName="极客邦”`
-
-然后`全局执行上下文` 变为
-
-变量环境 : bar={... }，foo=function...
-
-词法环境：myName=”极客邦“，\_printName=undefined
-
-3.然后执行 foo()函数，将 foo 的函数执行上下文压入栈中
-
-`foo执行上下文` ：
-
-      变量环境：无
-
-      词法环境：myName=undefined
-
-4.执行 foo 的可执行代码`myName="极客时间"`
-
-`foo执行上下文` ：
-
-      变量环境：无 词法环境：myName="极客时间"
-
-5.接着执行 return 后的 bar.printName。先查找 bar 这个变量，foo 先找自己的词法环境和变量环境，根据 foo 定义的位置(词法作用域)，知道父作用域是全局作用域，因此去全局执行上下文中找到 bar 变量。
-
-6.foo 执行完毕，从栈中弹出 foo 的执行上下文。
-
-7.然后执行 bar 中的 printName，将 printName 函数的执行上下文压入栈中。
-
-`printName执行上下文` ：
-
-      变量环境：空
-
-      词法环境：空
-
-      outer(父级作用域):全局执行上下文
-
-8.执行 printName 中的可执行代码`console.log(myName)`
-
-查找变量 myName，当前`printName函数执行上下文` 的词法环境没有>>变量环境也没有>>全局作用域(父级作用域)中找到了 myName(**注意对象中没有作用域这一说**) 输出 outer(父级作用域)指向的执行上下文也就是全局执行上下文中词法环境里的 myName 的值 极客邦
-
-9.printName 执行完毕，弹出 printName 的执行上下文
-
-10.然后`bar.printName()`再压入上下文调用栈
-
-    bar.printName执行上下文：
-
-      变量环境：空
-
-      词法环境：空
-
-      outer:全局执行上下文
-
-执行 printName 中的可执行代码`console.log(myName)`，还是一样的打印极客邦。
-
 ## 内存角度讲解闭包
 
 **作用域内的原始类型数据会被存储到栈空间，引用类型则会被存储到堆空间。**
@@ -195,6 +119,10 @@ console.log(bar.getName());
 
 #### 总结
 
-产生闭包的核心有两步：第一步是需要预扫描内部函数；第二步是把内部函数引用的外部变量保存到堆中。
+产生闭包的核心有两步：
+
+第一步是需要预扫描内部函数；
+
+第二步是把内部函数引用的外部变量保存到堆中。
 
 当前环境存在指向父级作用域的引用。也就是子函数用到了父级作用域链上的东西。

@@ -125,7 +125,7 @@ function sidebarFrontend() {
               link: '/frontend/JavaScript/variable-hosting/',
             },
             {
-              text: '作用域角度理解闭包',
+              text: '闭包解析',
               link: '/frontend/JavaScript/closure/',
             },
             {
