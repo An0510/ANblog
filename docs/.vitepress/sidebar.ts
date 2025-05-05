@@ -203,9 +203,10 @@ function sidebarAlgorithm() {
       text: 'Queue 队列',
       collapsed: false,
       items: [
+        { text: '介绍', link: '/basic/algorithm/queue/' },
         {
           text: '933. 最近的请求次数',
-          link: '/algorithm/queue/933',
+          link: '/basic/algorithm/queue/933',
         },
       ],
     },
