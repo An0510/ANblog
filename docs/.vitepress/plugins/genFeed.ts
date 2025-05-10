@@ -24,7 +24,7 @@ export async function genFeed(config: SiteConfig) {
     image: 'https://chodocs.cn/chodocs-logo.svg',
     favicon: `${baseUrl}/favicon.ico`,
     copyright:
-      'Copyright (c) 2022-present, Chocolate and ChoDocs contributors',
+      'Copyright (c) 2022-present, Annan',
   })
 
   const posts = await createContentLoader('**/*.md', {

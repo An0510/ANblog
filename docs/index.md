@@ -36,11 +36,11 @@ features:
     details: 数据结构与算法
     link: /basic/algorithm/
     linkText: 开始查阅
-  - icon: 🔧
-    title: 编程工具
-    details: 归纳一些编程相关工具与网站，提高效率。
-    link: /tool/
-    linkText: 提高效率
+  - icon: 🌎️
+    title: 计算机网络
+    details: 计算机网络
+    link: /basic/network/
+    linkText: 开始查阅
   - icon: ✨️
     title: 分享
     details: 持续输出分享，分享知识。

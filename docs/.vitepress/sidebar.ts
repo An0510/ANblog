@@ -7,9 +7,8 @@ export default {
       collapsed: false,
       items: [
         { text: '阅读须知', link: '/guide' },
-        { text: '资源导航', link: '/favorites' },
-        { text: '编程学习', link: '/program/' },
         { text: '前端基础', link: '/frontend/' },
+        { text: '框架', link: '/framework/' },
       ],
     },
   ],
@@ -18,12 +17,19 @@ export default {
   '/patterns/': sidebarPartterns(),
   '/ai/': sidebarAI(),
   '/basic/algorithm/': sidebarAlgorithm(),
-  '/tool/': [
+  '/basic/network/': [
     {
-      text: '🎒 常用',
+      text: 'TCP/IP 协议',
       collapsed: false,
       items: [
-        // { text: "emoji-list", link: "/tool/emoji-list" },
+        { text: 'TCP三次握手四次挥手', link: '/basic/network/TCPIP/TCP34' },
+      ],
+    },
+    {
+      text: 'HTTP 协议',
+      collapsed: false,
+      items: [
+        { text: 'HTTP状态码', link: '/basic/network/HTTP/HTTPStatus' },
       ],
     },
   ],
