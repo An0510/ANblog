@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 import { withPwa } from '@vite-pwa/vitepress'
 import { generateSitemap as sitemap } from 'sitemap-ts'
-import { description, docsVersion, github, keywords, name, site } from './meta'
+import { description, github, keywords, name, site } from './meta'
 import { genFeed } from './plugins/genFeed'
 import { pwa } from './plugins/pwa'
 import sidebar from './sidebar'
@@ -40,8 +40,8 @@ export default withPwa(
       },
       lastUpdatedText: '最后一次更新于',
       footer: {
-        message: '',
-        copyright: '',
+        message: '写代码是热爱，写到世界充满爱',
+        copyright: '陕ICP备2023013526号',
       },
       nav: [
         // {

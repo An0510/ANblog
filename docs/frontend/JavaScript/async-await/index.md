@@ -210,38 +210,6 @@ console.log(3)
 
 总结一下: await之后的行为实际上就是让子协程创建了一个promise.resolve(),  然后返回给了父协程微任务队列,   当父协程要执行微任务队列的时候,  触发promise_.then的回调函数,   然后在回调函数中将执行权和返回值都交给子协程 .
 
-```js
-async function async1() {
-	await async2()
-	console. Log("async1 end")
-}
-async function async() t console. Log("async end)
-async1()
-settimeout(function() t console. log('settimeout)
-new Promise(resolve =>1 console. log("Promise) resolve()
-then(function( O console. Log('promisel) })
-then(function()t console. log("promise)
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ```js
 let p1 = new Promise((resolve)=>{
@@ -258,20 +226,6 @@ async function fun(){
 }
 fun()
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 async 返回一个promise对象
 
@@ -350,7 +304,11 @@ new Promise(resolve => {
 })
 console.log(8)
 ```
-
+同步任务：1、3、5、8
+微任务：2、6、7
+宏任务：4
 1 3 5 8 2 6 7 4
 
-1.同步 2.process.nextTick 微任务 3.微任务 promise.then 4.宏任务 setTimeout Ajax 读取文件 5.setImmediate
+1.同步
+2.微任务 promise.then process.nextTick
+3.宏任务 setTimeout Ajax 读取文件 setImmediate
