@@ -22,6 +22,7 @@ export default {
       text: 'TCP/IP 协议',
       collapsed: false,
       items: [
+        { text: 'TCP/IP分层', link: '/basic/network/TCPIP/TCPIP' },
         { text: 'TCP三次握手四次挥手', link: '/basic/network/TCPIP/TCP34' },
       ],
     },
