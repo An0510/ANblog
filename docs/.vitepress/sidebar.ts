@@ -160,6 +160,10 @@ function sidebarFrontend() {
               text: '重绘重排',
               link: '/frontend/Browser/chonghuichongpai/',
             },
+            {
+              text: '浏览器安全-XSS',
+              link: '/frontend/Browser/security/XSS',
+            },
           ],
         },
       ],
