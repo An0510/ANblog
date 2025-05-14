@@ -34,7 +34,7 @@ onClick()
 
 #### 反射型XSS 放到URL上了
 
-比如说你设置了视图要展示xss参数, 然后点击了一个恶意链接是[`http://localhost:3000/?xss=`](http://localhost:3000/?xss=)` <script>alert('你被xss攻击了')</script> ` 就会导致xss被替换成了`<script>alert('你被xss攻击了')</script>`
+比如说你设置了视图要展示xss参数, 然后点击了一个恶意链接是`http://localhost:3000/?xss= <script>alert('你被xss攻击了')</script> ` 就会导致xss被替换成了`<script>alert('你被xss攻击了')</script>`
 
 **恶意脚本本身是作为请求参数发送到站点页面存在漏洞的地方（通常是搜索框），然后脚本反射（出现）在新渲染（或者部分刷新）的页面并执行。**
 
