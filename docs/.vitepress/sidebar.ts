@@ -164,6 +164,10 @@ function sidebarFrontend() {
               text: '浏览器安全-XSS',
               link: '/frontend/Browser/security/XSS',
             },
+            {
+              text: '浏览器安全-CSRF',
+              link: '/frontend/Browser/security/CSRF',
+            },
           ],
         },
       ],
