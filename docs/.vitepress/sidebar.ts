@@ -124,6 +124,10 @@ function sidebarFrontend() {
               link: '/frontend/JavaScript/data-type/',
             },
             {
+              text: '数据类型转换',
+              link: '/frontend/JavaScript/data-transform/',
+            },
+            {
               text: '原型链',
               link: '/frontend/JavaScript/prototype/',
             },
@@ -187,31 +191,7 @@ function sidebarAlgorithm() {
       collapsed: false,
       items: [
         { text: '介绍', link: '/basic/algorithm/stack/' },
-        { text: '20. 有效的括号', link: '/basic/algorithm/stack/22' },
-      ],
-    },
-    {
-      text: '哈希表',
-      collapsed: false,
-      items: [
-        { text: '介绍', link: '/algorithm/stack/' },
-        { text: '1. 两数之和', link: '/algorithm/hash-table/1' },
-        {
-          text: '3. 无重复字符的最长子串',
-          link: '/algorithm/hash-table/3',
-        },
-        {
-          text: '136. 只出现一次的数字',
-          link: '/algorithm/hash-table/136',
-        },
-        {
-          text: '349. 两个数组的交集',
-          link: '/algorithm/hash-table/349',
-        },
-        {
-          text: '560. 和为 K 的子数组',
-          link: '/algorithm/hash-table/560',
-        },
+        { text: '20. 有效的括号', link: '/basic/algorithm/stack/20' },
       ],
     },
     {
@@ -232,6 +212,16 @@ function sidebarAlgorithm() {
         { text: '介绍', link: '/basic/algorithm/linked-list/' },
         { text: '237. 删除链表中的节点', link: '/basic/algorithm/linked-list/237' },
         { text: '206. 反转链表', link: '/basic/algorithm/linked-list/206' },
+      ],
+    },
+    {
+      text: 'Tree 树',
+      collapsed: false,
+      items: [
+        { text: '介绍', link: '/basic/algorithm/tree/' },
+        { text: '深度优先和广度优先遍历', link: '/basic/algorithm/tree/深度优先和广度优先遍历' },
+        { text: '二叉树的先中后序遍历', link: '/basic/algorithm/tree/二叉树的先中后序遍历' },
+        { text: '102. 二叉树的层序遍历', link: '/basic/algorithm/tree/102二叉树的层序遍历' },
       ],
     },
     // {

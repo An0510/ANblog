@@ -6,7 +6,8 @@ date: 2022-03-04
 
 根据 mini-vue 进行学习.
 
-打开[mini-vue](https://github.com/cuixiaorui/mini-vue)，`pnpm install` 安装依赖。
+打开[mini-vue](https://github.com/cuixiaorui/mini-vue)
+`pnpm install` 安装依赖。
 
 ### Reactive
 
@@ -194,7 +195,6 @@ function createGetter(isReadonly = false, shallow = false) {
 
 - 这里的 targetMap 是声明在外部的`const targetMap = new WeakMap();`也就是说是全局公用的，用于存放所有依赖关系。{对象 : depsMap( {对象属性 : dep( { 依赖函数 1，依赖函数 2 等 } ) )} , 数据 2:...}。
 
-![](https://typora-an.oss-cn-hangzhou.aliyuncs.com/%E5%89%8D%E7%AB%AF/image.png)
 
 ```JavaScript
 export function track(target, type, key) {
