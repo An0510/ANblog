@@ -36,8 +36,20 @@ export default {
   ],
   '/essay/': autoSidebar({ base: 'essay' }),
   '/archive/': autoSidebar({ base: 'archive' }),
+  '/share/': sidebarShare(),
 }
-
+function sidebarShare() {
+  return [
+    {
+      text: '分享',
+      collapsed: false,
+      items: [
+        { text: '介绍', link: '/share/' },
+        { text: 'V8-内联缓存IC', link: '/frontend/Browser/v8/内联缓存IC.md' },
+      ],
+    },
+  ]
+}
 function sidebarAI() {
   return [
     {
@@ -167,6 +179,22 @@ function sidebarFrontend() {
             {
               text: '浏览器安全-CSRF',
               link: '/frontend/Browser/security/CSRF',
+            },
+            {
+              text: 'V8中如何执行JavaScript代码的',
+              link: '/frontend/Browser/v8/v8如何执行JavaScript代码的.md',
+            },
+            {
+              text: 'JavaScript中对象的快慢属性',
+              link: '/frontend/Browser/v8/JavaScript中对象的快慢属性.md',
+            },
+            {
+              text: 'V8-隐藏类和内联缓存IC',
+              link: '/frontend/Browser/v8/内联缓存IC.md',
+            },
+            {
+              text: '如何通过d8深入分析对象',
+              link: '/frontend/Browser/v8/如何通过d8深入分析对象.md',
             },
           ],
         },
