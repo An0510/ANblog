@@ -40,7 +40,7 @@ export default withPwa(
       },
       lastUpdatedText: '最后一次更新于',
       footer: {
-        message: '写代码是热爱，写到世界充满爱',
+        message: '',
         copyright: '陕ICP备2023013526号',
       },
       nav: [

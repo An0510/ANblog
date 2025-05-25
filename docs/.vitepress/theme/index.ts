@@ -4,6 +4,7 @@ import DefaultTheme from 'vitepress/theme'
 import { nextTick, onMounted, watch } from 'vue'
 import busuanzi from 'busuanzi.pure.js'
 import mediumZoom from 'medium-zoom'
+import CustomSlogan from './components/CustomSlogan.vue'
 import { registerAnalytics, siteIds, trackPageview } from './plugins/baidutongji'
 import googleAnalytics from './plugins/googleAnalytics'
 import './styles/main.css'
@@ -18,6 +19,7 @@ if (inBrowser)
 
 const theme: Theme = {
   ...DefaultTheme,
+  Layout: CustomSlogan,
   enhanceApp({ router }: EnhanceAppContext) {
     googleAnalytics({
       id: 'G-0F3DLK5BSG',
