@@ -37,6 +37,7 @@ export default {
   '/essay/': autoSidebar({ base: 'essay' }),
   '/archive/': autoSidebar({ base: 'archive' }),
   '/share/': sidebarShare(),
+  '/input/': autoSidebar({ base: 'input' }),
 }
 function sidebarShare() {
   return [
@@ -66,6 +67,19 @@ function sidebarFramework() {
       text: '🏗️ 框架',
       items: [
         { text: '介绍', link: '/framework/' },
+        {
+          text: '重学React',
+          items: [
+            {
+              text: '介绍',
+              link: '/framework/react/介绍',
+            },
+            {
+              text: 'React是什么',
+              link: '/framework/react/react是什么',
+            },
+          ],
+        },
         {
           text: 'Vue',
           items: [
