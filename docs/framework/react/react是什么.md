@@ -1,3 +1,9 @@
+---
+title: React是什么？
+date: 2025-06-03
+author: Annan
+---
+
 # React是什么？
 
 React的中文含义是反应或者响应。 React的核心原理是：当数据变化时，UI能自动把变化反应出来。
