@@ -78,6 +78,10 @@ function sidebarFramework() {
               text: 'React是什么',
               link: '/framework/react/react是什么',
             },
+            {
+              text: 'React为什么有Hooks',
+              link: '/framework/react/React为什么有Hooks',
+            },
           ],
         },
         {
