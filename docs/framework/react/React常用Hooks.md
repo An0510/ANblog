@@ -1,9 +1,8 @@
 ---
-title: React是什么？
+title: React常用Hooks
 date: 2025-06-14
 author: Annan
 ---
-
 # React常用Hooks
 
 React没提供太多的Hooks，比如 useState、useEffect、useCallback、useMemo、useRef、useContext 等等，掌握常用的就可以应对日常90%的开发了。
@@ -92,7 +91,7 @@ https://zh-hans.react.dev/reference/react/useEffect
 	- **清理（cleanup）** 函数在两种情况下执行。
 		1. 在每次依赖项变更重新渲染后，React 将首先使用旧值运行 cleanup 函数（如果你提供了该函数），然后使用新值运行 setup 函数。
 		2. 在组件从 DOM 中移除后，React 将最后一次运行 cleanup 函数。
-- **可选** `dependencies`：`setup` 代码中引用的数据，如 **props**、**state** 以及所有直接在组件内部声明的变量和函数。如果你的代码检查工具 [配置了 React](https://zh-hans.react.dev/learn/editor-setup#linting)，那么它将验证是否每个响应式值都被正确地指定为一个依赖项。依赖项列表的元素数量必须是固定的，并且必须像 `[dep1, dep2, dep3]` 这样内联编写。React 将使用 [`Object.is`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is) 来比较每个依赖项和它先前的值。如果省略此参数，则在每次重新渲染组件之后，将重新运行 Effect 函数。如果你想了解更多，请参见 [传递依赖数组、空数组和不传递依赖项之间的区别](https://zh-hans.react.dev/reference/react/useEffect#examples-dependencies)。
+- **可选** `dependencies`：`setup` 代码中引用的数据，如 **props**、**state** 以及所有直接在组件内部声明的变量和函数。如果你的代码检查工具[配置了 React](https://zh-hans.react.dev/learn/editor-setup#linting)，那么它将验证是否每个响应式值都被正确地指定为一个依赖项。依赖项列表的元素数量必须是固定的，并且必须像 `[dep1, dep2, dep3]` 这样内联编写。React 将使用[Object.is](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is)来比较每个依赖项和它先前的值。如果省略此参数，则在每次重新渲染组件之后，将重新运行 Effect 函数。如果你想了解更多，请参见[传递依赖数组、空数组和不传递依赖项之间的区别](https://zh-hans.react.dev/reference/react/useEffect#examples-dependencies)。
  >这里官方文档说的响应式值包括state和props感觉并不准确，在React里props和state是声明式的更准确。而Vue才是响应式的，Vue的响应式数据改变后会自动渲染(自动依赖追踪)，而React中渲染的源头是手动的行为(setState)，只是父组件重新渲染会间接重新渲染子组件。
 
 >跟Vue的响应式不同，dependencies中的比对不是响应式的，Vue是在数据变化的时候处理回调，React是在重新渲染时才会用Object.is比对后才执行回调。
@@ -192,7 +191,7 @@ https://zh-hans.react.dev/reference/react/useCallback
 	- 当进行下一次渲染时，也就是渲染过程中，判断`dependencies` 相比于上一次渲染时没有改变
 		- 没有改变，那么 React 将会返回相同的函数。
 		- 有改变，React 将返回在最新一次渲染中传入的函数，并且将其缓存以便之后使用。这个Hooks不会调用此函数，只是返回此函数。你可以自己决定何时调用以及是否调用。
-- `dependencies`：有关是否更新 `fn` 的相关数据，包括 props、state，和所有在你组件内部直接声明的变量和函数。如果你的代码检查工具 [配置了 React](https://zh-hans.react.dev/learn/editor-setup#linting)，那么它将校验每一个正确指定为依赖的响应式值。依赖列表必须具有确切数量的项，并且必须像 `[dep1, dep2, dep3]` 这样编写。和useEffect的dependencies一样，React 使用 [`Object.is`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is) 比较每一个依赖和它的之前的值。这里的dependencies数组里的数据就是那些函数需要更新的闭包内容。
+- `dependencies`：有关是否更新 `fn` 的相关数据，包括 props、state，和所有在你组件内部直接声明的变量和函数。如果你的代码检查工具[配置了 React](https://zh-hans.react.dev/learn/editor-setup#linting)，那么它将校验每一个正确指定为依赖的响应式值。依赖列表必须具有确切数量的项，并且必须像 `[dep1, dep2, dep3]` 这样编写。和useEffect的dependencies一样，React 使用[`Object.is`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is)比较每一个依赖和它的之前的值。这里的dependencies数组里的数据就是那些函数需要更新的闭包内容。
 
 除了useCallback， useMemo也是为了缓存设计的，只不过useCallback缓存的是函数，而useMemo缓存的是计算的结果。
 
@@ -279,7 +278,7 @@ https://zh-hans.react.dev/reference/react/useMemo
 	- React 将会在首次渲染时调用该函数；
 	- 在之后的渲染中，如果 `dependencies` 没有发生变化，React 将直接返回相同值。否则，将会再次调用 `calculateValue` 并返回最新结果，然后缓存该结果以便下次重复使用。
     
-- `dependencies`：所有在 `calculateValue` 函数中使用的响应式变量组成的数组。响应式变量包括 props、state 和所有你直接在组件中定义的变量和函数。如果你在代码检查工具中 [配置了 React](https://zh-hans.react.dev/learn/editor-setup#linting)，它将会确保每一个响应式数据都被正确地定义为依赖项。依赖项数组的长度必须是固定的并且必须写成 `[dep1, dep2, dep3]` 这种形式。React 使用 [`Object.is`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is) 将每个依赖项与其之前的值进行比较。
+- `dependencies`：所有在 `calculateValue` 函数中使用的响应式变量组成的数组。响应式变量包括 props、state 和所有你直接在组件中定义的变量和函数。如果你在代码检查工具中[配置了 React](https://zh-hans.react.dev/learn/editor-setup#linting)，它将会确保每一个响应式数据都被正确地定义为依赖项。依赖项数组的长度必须是固定的并且必须写成 `[dep1, dep2, dep3]` 这种形式。React 使用[`Object.is`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is)将每个依赖项与其之前的值进行比较。
 
 ### useRef: 在多次渲染之间共享数据
 

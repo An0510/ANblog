@@ -22,8 +22,8 @@ export function MarkdownTransform(): Plugin {
         imgMatches = imgRegex.exec(code)
       }
 
-      // convert links to components
-      const linkRegex = /\[(.+?)\]\((.+?)\)/g
+      // convert links to components only if they are on their own line
+      const linkRegex = /^\s*\[(.+?)\]\((.+?)\)\s*$/gm
       let matches = linkRegex.exec(code)
       while (matches) {
         const [text, link] = matches.slice(1)
