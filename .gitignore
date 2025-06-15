@@ -6,6 +6,7 @@ dist
 cache
 .eslintcache
 components.d.ts
+.idea
 
 # local env files
 .env.local
