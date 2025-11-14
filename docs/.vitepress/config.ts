@@ -41,7 +41,7 @@ export default withPwa(
       lastUpdatedText: '最后一次更新于',
       footer: {
         message: '',
-        copyright: '陕ICP备2023013526号',
+        copyright: '<a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">陕ICP备2023013526号</a>',
       },
       nav: [
         {
